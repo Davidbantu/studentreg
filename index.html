@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Register</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+  <div class="container">
+    <h1>Student Register</h1>
+    <form id="student-form">
+      <div class="input-group">
+        <input type="text" id="student-id" placeholder="Student ID" required>
+        <input type="text" id="student-name" placeholder="Name" required>
+        <input type="tel" id="student-phone" placeholder="Phone Number" required pattern="^\+?\d{10,15}$">
+        <button type="submit" id="add-btn">Add Student</button>
+      </div>
+    </form>
+    <table id="student-table">
+      <thead>
+        <tr>
+          <th>ID Number</th>
+          <th>Name</th>
+          <th>Phone Number</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Entries go here -->
+      </tbody>
+    </table>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
