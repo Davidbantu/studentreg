@@ -1,0 +1,136 @@
+:root {
+  --primary: #2563eb;
+  --secondary: #f1f5f9;
+  --accent: #fde68a;
+  --error: #ef4444;
+  --radius: 8px;
+  --shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+body {
+  background: linear-gradient(120deg, #f8fafc, #e0e7ff 100%);
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  margin: 0; padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  background: #fff;
+  box-shadow: var(--shadow);
+  margin: 50px auto;
+  padding: 2rem;
+  border-radius: var(--radius);
+}
+
+h1 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+form {
+  margin-bottom: 2rem;
+}
+
+.input-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.input-group input {
+  flex: 1 1 150px;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  transition: border 0.2s;
+}
+
+.input-group input:focus {
+  border: 1.5px solid var(--primary);
+  outline: none;
+}
+
+#add-btn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+#add-btn:hover {
+  background: #1d4ed8;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fafafa;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+th, td {
+  padding: 1rem;
+  text-align: left;
+}
+
+th {
+  background: var(--secondary);
+  color: #374151;
+  font-weight: 600;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+tr:nth-child(even) {
+  background: #f3f4f6;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn {
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-edit {
+  background: var(--accent);
+  color: #b45309;
+}
+.btn-edit:hover {
+  background: #fbbf24;
+}
+.btn-delete {
+  background: var(--error);
+  color: #fff;
+}
+.btn-delete:hover {
+  background: #b91c1c;
+}
+
+@media (max-width: 600px) {
+  .input-group, .actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .container {
+    padding: 1rem;
+  }
+  th, td {
+    padding: 0.5rem;
+  }
+}
